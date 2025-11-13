@@ -112,3 +112,8 @@ teedoc serve
 teedoc build
 ```
 
+
+如果想对静态网页和pdf文件做托管，可以使用gohosted：https://gohosted.app/
+
+
+
