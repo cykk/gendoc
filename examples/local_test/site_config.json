@@ -1,0 +1,152 @@
+{
+    "site_name": "teedoc",
+    "site_slogon": "happy to write",
+    "site_root_url": "/",
+    "site_domain": "teedoc.github.io",
+    "site_protocol": "https",
+    "config_template_dir": "./",
+    "source": "https://github.com/teedoc/teedoc.github.io/blob/main",
+    "route": {
+        "docs": {
+            "/get_started/zh/": "docs/get_started/zh",
+            "/develop/zh/": "docs/develop/zh",
+            "/develop/en/": "docs/develop/en",
+            "/more/": "docs/more"
+        },
+        "pages": {
+            "/": "pages/index/zh"
+        },
+        "assets": {
+            "/static/": "static",
+            "/get_started/assets/": "docs/get_started/assets"
+        },
+        "blog": {
+            "/blog/": "blog"
+        }
+    },
+    "translate": {
+        "docs":{
+            "/get_started/zh/": [ {
+                    "url": "/get_started/en/",
+                    "src": "docs/get_started/en"
+                }
+            ],
+            "/more/": [ {
+                    "url": "/more/en/",
+                    "src": "docs/more/en"
+                }
+            ]
+        },
+        "pages": {
+            "/": [{
+                    "url": "/en/",
+                    "src": "pages/index/en"
+                }
+            ]
+        }
+    },
+    "plugins": {
+        "teedoc-plugin-markdown-parser": {
+            "from": "../../plugins/teedoc-plugin-markdown-parser",
+            "config": {
+                "mathjax": {
+                    "enable": true,
+                    "file_name": "tex-mml-svg",
+                    "config": {
+                        "loader": {
+                            "load": []
+                        }
+                    }
+                }
+            }
+        },
+        "teedoc-plugin-jupyter-notebook-parser": {
+            "from": "../../plugins/teedoc-plugin-jupyter-notebook-parser",
+            "config": {
+
+            }
+        },
+        "teedoc-plugin-blog": {
+            "from": "../../plugins/teedoc-plugin-blog",
+            "config": {
+
+            }
+        },
+        "teedoc-plugin-google-translate": {
+            "from": "../../plugins/teedoc-plugin-google-translate",
+            "config": {
+                "doc_types": ["blog"]
+            }
+        },
+        "teedoc-plugin-theme-default": {
+            "from": "../../plugins/teedoc-plugin-theme-default",
+            "config": {
+                "dark": true,
+                "show_print_page": true,
+                "toc_depth": 4,
+                "env": {
+                    "main_color": "#5c9abc",
+                    "sidebar_width": "300px"
+                },
+                "code_highlight_css": "/static/css/prism.css",
+                "code_highlight_js": "/static/js/prism.js"
+            }
+        },
+        "teedoc-plugin-search": {
+            "from": "../../plugins/teedoc-plugin-search",
+            "config": {
+                "search_hint": "Search"
+            }
+        },
+        "teedoc-plugin-baidu-tongji": {
+            "from": "../../plugins/teedoc-plugin-baidu-tongji",
+            "config": {
+                "code": "90c693aa2475224142e727c14a50bb49"
+            }
+        },
+        "teedoc-plugin-ad-hint": {
+            "from": "../../plugins/teedoc-plugin-ad-hint",
+            "config": {
+                "type": "hint",
+                "label": "!!!",
+                "content": "",
+                "show_after_s": 432000
+            }
+        },
+        "teedoc-plugin-assets": {
+            "from": "../../plugins/teedoc-plugin-assets",
+            "config": {
+                "header_items": [
+                    "/static/css/custom.css"
+                ],
+                "footer_items": [
+                    "/static/js/custom.js"
+                ],
+                "env":{
+                    "main_color": "#4caf7d"
+                }
+            }
+        },
+        "teedoc-plugin-thumbs-up": {
+            "from": "../../plugins/teedoc-plugin-thumbs-up",
+            "config": {
+                "label_up": "有帮助",
+                "label_down": "没帮助",
+                "url": "http://192.168.0.50:5000",
+                "show_up_count": true,
+                "show_down_count": false,
+                "msg_already_voted": "You have already voted",
+                "msg_thanks": "Thanks for your vote",
+                "msg_down_prompt": "Thanks to tell us where we can improve?(At least 10 characters)",
+                "msg_down_prompt_error": "Message should be at least 10 characters and less than 256 characters",
+                "msg_error": "Request server failed!"
+            }
+        }
+    },
+    "rebuild_changes_delay": 1,
+    "robots": {
+        "User-agent": "*"
+    },
+    "layout_root_dir": "layout",
+    "layout_i18n_dirs": "locales"
+}

@@ -1,0 +1,17 @@
+
+{% extends "article.html" %}
+
+
+{% block html %}
+<html {% if lang %}lang="{{ lang }}"{% endif %} id="html_syntax_page" class="{% for c in page_classes%} {{ c }} {% endfor%}">
+{% endblock %}
+
+{% block title %}
+    <h1>Directly use HTML with jinja2 template support</h1>
+{% endblock %}
+
+{% block content %}
+    <div>This is a html source example</div>
+{% endblock %}
+
+
